@@ -31,6 +31,16 @@
 		<br>
 		name:<input type="text" name="pet.name"><br>
 		color:<input type="text" name="pet.color"><br>
+		<br>
+		-----Pet-----
+		<br>
+		name:<input type="text" name="pets[0].name"><br>
+		color:<input type="text" name="pets[0].color"><br>
+		<br>
+		-----Pet-----
+		<br>
+		name:<input type="text" name="pets[1].name"><br>
+		color:<input type="text" name="pets[1].color"><br>
 		<input type="submit" value="提交">
 	</form>
 	
