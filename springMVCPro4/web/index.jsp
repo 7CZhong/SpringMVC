@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>index</title>
   </head>
   <body>
     <a href="${pageContext.request.contextPath}/testView">测试View</a>
+    <hr/>
+    <a href="${pageContext.request.contextPath}/testUpdate/18">测试update更新</a>
   </body>
 </html>
