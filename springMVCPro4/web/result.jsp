@@ -15,8 +15,8 @@
 <body>
     <h1>Result</h1><hr/>
     <fm:form modelAttribute="user" action="${pageContext.request.contextPath}/testUpdate2">
-        姓名：<fm:input path="name"/><br>
-        年龄：<fm:input path="age" /><br>
+        姓名：<fm:input path="name"/><fm:errors path="name" cssStyle="color: red"/><br>
+        年龄：<fm:input path="age" /><fm:errors path="age" cssStyle="color: red"/><br>
         性别：<fm:radiobutton path="gender" value="1" label="男"/>
         <fm:radiobutton path="gender" value="0" label="女"/><br>
         爱好：<fm:checkboxes path="hobby" items="${allhobbys}"/><br>
