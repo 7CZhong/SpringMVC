@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -96,6 +97,15 @@ public class MyController {
         }
 
         return "/result2.jsp";
+    }
+
+    @RequestMapping("getJson")
+    @ResponseBody
+    public User getJson(){
+        User user = new User();
+        user.setName("xiaoxi");
+        user.setAge(18);
+        return user;
     }
 
 }
