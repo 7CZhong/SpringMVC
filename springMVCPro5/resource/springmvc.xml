@@ -31,4 +31,35 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!--上传文件配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="102400"/>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="language"/>
+    </bean>
+
+    <!--配置session本地解析器-->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="language"/>
+        </bean>
+
+        <!--自定义拦截器-->
+        <mvc:interceptor>
+            <!--拦截单个-->
+            <mvc:mapping path="/local"/>
+            <bean class="com.itlike.interceptor.MyFirstInterceptor"></bean>
+            <!--除单个之外都拦截-->
+            <!--<mvc:exclude-mapping path=""/>-->
+        </mvc:interceptor>
+        <!--拦截所有-->
+        <bean class="com.itlike.interceptor.MySecondInterceptor"></bean>
+
+    </mvc:interceptors>
+
 </beans>

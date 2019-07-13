@@ -11,6 +11,6 @@
     <title>Download</title>
 </head>
 <body>
-    <h1>下载成功</h1>
+    <h1>成功</h1>
 </body>
 </html>

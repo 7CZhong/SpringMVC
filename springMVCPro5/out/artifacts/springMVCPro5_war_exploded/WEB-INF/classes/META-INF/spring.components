@@ -1,3 +1,4 @@
 #
-#Wed Jul 10 20:34:11 GMT+08:00 2019
+#Sat Jul 13 15:59:42 GMT+08:00 2019
 com.itlike.controller.MyController=org.springframework.stereotype.Component
+com.itlike.controller.ExceptionController=org.springframework.stereotype.Component
